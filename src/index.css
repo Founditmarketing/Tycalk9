@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Anton", "Impact", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+  --color-brand: #F2B536;
+  --color-dark: #0A0A0A;
+  --color-pureblack: #000000;
+}
+
+body {
+  background-color: var(--color-pureblack);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.texture-bg {
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.grunge-bg {
+  background-color: var(--color-dark);
+  background-image: url("/tycalk9backgroundtexture.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@layer base {
+  button {
+    border-radius: 0.375rem;
+  }
+}
+
