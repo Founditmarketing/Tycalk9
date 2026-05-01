@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn';
+
 export default function Hero() {
   return (
     <section className="relative w-full h-[95vh] min-h-[600px] flex items-center grunge-bg overflow-hidden">
@@ -7,16 +9,16 @@ export default function Hero() {
       {/* Desktop Container */}
       <div className="hidden md:flex max-w-7xl mx-auto w-full px-6 pt-48 relative z-10 h-full">
         {/* Left Side: Dog Photo */}
-        <div className="w-[40%] h-full relative">
+        <FadeIn direction="left" delay={200} className="w-[40%] h-full relative">
           <img 
             src="/tycalheroimage-left.png" 
             alt="TyCal K9 Dog" 
             className="absolute bottom-0 left-[-2rem] h-[110%] w-auto object-contain object-bottom drop-shadow-2xl max-w-none"
           />
-        </div>
+        </FadeIn>
 
         {/* Right Side Content */}
-        <div className="w-full md:w-[60%] flex flex-col justify-center gap-6 pl-0 md:-ml-4">
+        <FadeIn direction="right" delay={400} className="w-full md:w-[60%] flex flex-col justify-center gap-6 pl-0 md:-ml-4">
           <h1 className="font-heading text-[4.5rem] lg:text-[6rem] text-white uppercase leading-[0.9] tracking-tight">
             #1 Dog Training<br />Program in Houston
           </h1>
@@ -28,23 +30,23 @@ export default function Hero() {
               Book A Free Evaluation
             </button>
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       {/* Mobile Container */}
       <div className="md:hidden w-full h-full relative z-10 flex flex-col pt-52 pb-0">
         {/* Mobile Text */}
-        <div className="px-6 flex flex-col z-20">
+        <FadeIn direction="down" delay={200} className="px-6 flex flex-col z-20">
           <p className="text-gray-400 italic text-[1.1rem] font-heading uppercase tracking-widest drop-shadow-md">
              "WHERE THE PROS GO."
           </p>
           <h1 className="font-heading text-5xl text-white uppercase leading-[0.9] tracking-tight mt-1 drop-shadow-xl">
             #1 Dog Training<br />Program In<br />Houston
           </h1>
-        </div>
+        </FadeIn>
         
         {/* Dog Image & Floating Button */}
-        <div className="flex-1 relative w-full mt-2">
+        <FadeIn direction="up" delay={400} className="flex-1 relative w-full mt-2">
           <img 
             src="/tycalheroimage-left.png" 
             alt="TyCal K9 Dog" 
@@ -56,7 +58,7 @@ export default function Hero() {
               Free Evaluation
             </button>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

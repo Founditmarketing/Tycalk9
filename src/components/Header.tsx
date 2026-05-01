@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Instagram, Menu, X } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,8 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50">
+    <FadeIn direction="down" scale={false} className="absolute top-0 left-0 w-full z-50">
+      <header className="w-full">
       {/* Top Alert Bar */}
       <div className="w-full bg-black md:bg-brand py-2 px-4 flex justify-center items-center text-white md:text-pureblack z-50 relative">
         <div className="text-center font-bold italic text-[11px] md:text-sm tracking-wider md:tracking-wide">
@@ -176,6 +178,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+      </header>
+    </FadeIn>
   );
 }

@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn';
+
 const services = [
   {
     title: 'Puppy Development',
@@ -25,13 +27,15 @@ export default function Services() {
   return (
     <section className="w-full bg-pureblack py-24 px-6 border-t border-brand/20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white font-heading text-5xl md:text-6xl uppercase tracking-wide mb-10 md:mb-16">
-          What We Do
-        </h2>
+        <FadeIn direction="up">
+          <h2 className="text-center text-white font-heading text-5xl md:text-6xl uppercase tracking-wide mb-10 md:mb-16">
+            What We Do
+          </h2>
+        </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, idx) => (
-            <div key={idx} className="flex flex-col border border-brand h-full">
+            <FadeIn key={idx} direction="up" delay={idx * 150} className="flex flex-col border border-brand h-full">
               {/* Image Frame */}
               <div className="h-80 w-full overflow-hidden">
                 <img 
@@ -65,7 +69,7 @@ export default function Services() {
               <button className="w-full bg-brand py-4 text-pureblack font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors rounded-none">
                 Learn More
               </button>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

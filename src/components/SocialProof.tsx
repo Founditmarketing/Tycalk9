@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Star, ChevronLeft } from 'lucide-react';
 import VideoPlayer from './VideoPlayer';
+import FadeIn from './FadeIn';
 
 const reviews = [
   {
@@ -50,16 +51,16 @@ export default function SocialProof() {
         <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           
           {/* Left Title */}
-          <div className="w-full lg:w-1/3">
+          <FadeIn direction="right" className="w-full lg:w-1/3">
             <h2 className="text-white font-heading text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight leading-[0.9]">
               What Our<br/>Clients Say!
             </h2>
-          </div>
+          </FadeIn>
 
           {/* Right Reviews Carousel */}
-          <div className="w-full lg:w-2/3 flex flex-col gap-6">
+          <FadeIn direction="left" delay={200} className="w-full lg:w-2/3 flex flex-col gap-6">
             <div ref={widgetRef} className="w-full min-h-[250px]"></div>
-          </div>
+          </FadeIn>
         </div>
 
         {/* Bottom Half: 3 Column Videos */}
@@ -69,7 +70,9 @@ export default function SocialProof() {
             { video: "/Video-2.mov", poster: "/video-thumb-3.png" },
             { video: "/Video_3.mov", poster: "/video-thumb-2.png" }
           ].map((vid, idx) => (
-            <VideoPlayer key={idx} src={vid.video} poster={vid.poster} />
+            <FadeIn key={idx} direction="up" delay={idx * 200}>
+              <VideoPlayer src={vid.video} poster={vid.poster} />
+            </FadeIn>
           ))}
         </div>
 

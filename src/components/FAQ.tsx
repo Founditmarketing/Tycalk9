@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 const faqs = [
   {
@@ -30,14 +31,18 @@ export default function FAQ() {
   return (
     <section className="w-full bg-pureblack py-24 px-6 border-b border-brand/20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-center text-white font-heading text-5xl md:text-6xl uppercase tracking-wide mb-16">
-          Frequently Asked Questions (FAQ)
-        </h2>
+        <FadeIn direction="up">
+          <h2 className="text-center text-white font-heading text-5xl md:text-6xl uppercase tracking-wide mb-16">
+            Frequently Asked Questions (FAQ)
+          </h2>
+        </FadeIn>
 
         <div className="flex flex-col gap-4">
           {faqs.map((faq, idx) => (
-            <div 
+            <FadeIn 
               key={idx} 
+              direction="up" 
+              delay={idx * 100}
               className="border border-brand rounded-none bg-transparent overflow-hidden"
             >
               <div 
@@ -61,7 +66,7 @@ export default function FAQ() {
                   {faq.answer}
                 </div>
               )}
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
