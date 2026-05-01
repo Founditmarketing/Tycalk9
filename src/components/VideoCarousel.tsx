@@ -13,7 +13,12 @@ interface VideoCarouselProps {
 }
 
 export default function VideoCarousel({ videos }: VideoCarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'start',
+    dragFree: true,
+    duration: 50 // Slower, smoother slide animation
+  });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
