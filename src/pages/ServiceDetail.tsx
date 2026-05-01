@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 
 export default function ServiceDetail() {
@@ -19,9 +19,11 @@ export default function ServiceDetail() {
         <h1 className="font-heading text-6xl md:text-8xl text-white uppercase tracking-wider mb-8 drop-shadow-lg z-10 relative text-center px-4">
           {service.title}
         </h1>
-        <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors z-10 relative shadow-2xl">
-          Call Now
-        </button>
+        <Link to="/contact" className="z-10 relative">
+          <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-2xl">
+            Call Now
+          </button>
+        </Link>
       </section>
 
       {/* Content Section */}
@@ -37,9 +39,11 @@ export default function ServiceDetail() {
               <p>{service.description}</p>
             </div>
             <div className="mt-8">
-              <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-xl">
-                Call Now
-              </button>
+              <Link to="/contact">
+                <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-xl">
+                  Call Now
+                </button>
+              </Link>
             </div>
           </div>
 

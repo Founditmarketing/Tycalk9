@@ -1,4 +1,5 @@
 import FadeIn from './FadeIn';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -26,9 +27,11 @@ export default function Hero() {
              "Where the pros go."
           </p>
           <div className="mt-4">
-            <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-lg tracking-widest hover:bg-white transition-colors">
-              Book A Free Evaluation
-            </button>
+            <Link to="/contact">
+              <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-lg tracking-widest hover:bg-white transition-colors">
+                Book A Free Evaluation
+              </button>
+            </Link>
           </div>
         </FadeIn>
       </div>
@@ -54,9 +57,11 @@ export default function Hero() {
           />
           {/* Button overlay */}
           <div className="absolute bottom-10 w-full px-6 flex justify-center z-20">
-            <button className="bg-brand text-pureblack font-bold uppercase py-3 px-8 text-sm tracking-widest hover:bg-white transition-colors rounded-md shadow-2xl">
-              Free Evaluation
-            </button>
+            <Link to="/contact">
+              <button className="bg-brand text-pureblack font-bold uppercase py-3 px-8 text-sm tracking-widest hover:bg-white transition-colors rounded-md shadow-2xl">
+                Free Evaluation
+              </button>
+            </Link>
           </div>
         </FadeIn>
       </div>

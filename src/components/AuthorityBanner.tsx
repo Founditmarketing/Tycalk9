@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Heart, MessageCircle, Send, Bookmark, Instagram } from 'lucide-react';
 import FadeIn from './FadeIn';
 
@@ -30,9 +31,11 @@ export default function AuthorityBanner() {
             <MapPin className="text-red-500 w-5 h-5 fill-current" />
             <span className="text-pureblack italic font-medium">Located in Arcola, TX - Serving Houston and surrounding areas.</span>
           </div>
-          <button className="mt-6 bg-pureblack text-brand font-bold uppercase py-4 px-10 tracking-widest text-sm hover:bg-white hover:text-pureblack transition-colors">
-            Learn More
-          </button>
+          <Link to="/about">
+            <button className="mt-6 bg-pureblack text-brand font-bold uppercase py-4 px-10 tracking-widest text-sm hover:bg-white hover:text-pureblack transition-colors">
+              Learn More
+            </button>
+          </Link>
         </FadeIn>
       </section>
 
@@ -69,12 +72,16 @@ export default function AuthorityBanner() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-brand text-pureblack font-bold uppercase py-4 px-8 tracking-widest text-sm hover:bg-white transition-colors">
-                  View More Posts
-                </button>
-                <button className="bg-brand text-pureblack font-bold uppercase py-4 px-8 tracking-widest text-sm hover:bg-white transition-colors">
-                  Book A Free Evaluation
-                </button>
+                <a href="https://www.instagram.com/tycalk9/" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-brand text-pureblack font-bold uppercase py-4 px-8 tracking-widest text-sm hover:bg-white transition-colors">
+                    View More Posts
+                  </button>
+                </a>
+                <Link to="/contact">
+                  <button className="bg-brand text-pureblack font-bold uppercase py-4 px-8 tracking-widest text-sm hover:bg-white transition-colors">
+                    Book A Free Evaluation
+                  </button>
+                </Link>
               </div>
             </div>
           </FadeIn>

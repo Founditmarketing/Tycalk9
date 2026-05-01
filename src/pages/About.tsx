@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function About() {
   return (
     <div className="w-full bg-pureblack min-h-screen">
@@ -7,9 +9,11 @@ export default function About() {
         <h1 className="font-heading text-6xl md:text-8xl text-white uppercase tracking-wider mb-8 drop-shadow-lg z-10 relative text-center px-4">
           About Us
         </h1>
-        <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors z-10 relative shadow-2xl">
-          Meet Our Trainer
-        </button>
+        <Link to="/contact" className="z-10 relative">
+          <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-2xl">
+            Meet Our Trainer
+          </button>
+        </Link>
       </section>
 
       {/* Content Section */}

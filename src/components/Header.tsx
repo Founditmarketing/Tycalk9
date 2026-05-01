@@ -98,9 +98,11 @@ export default function Header() {
 
         {/* Right: Button & Mobile Menu */}
         <div className="flex items-center gap-4">
-          <button className="hidden lg:block bg-brand text-pureblack font-bold uppercase py-3 px-8 text-sm tracking-widest hover:bg-white transition-colors shadow-lg shadow-brand/20">
-            Call Now
-          </button>
+          <Link to="/contact">
+            <button className="hidden lg:block bg-brand text-pureblack font-bold uppercase py-3 px-8 text-sm tracking-widest hover:bg-white transition-colors shadow-lg shadow-brand/20">
+              Call Now
+            </button>
+          </Link>
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
             className="lg:hidden bg-brand p-2 text-pureblack rounded hover:bg-white transition-colors"
@@ -170,9 +172,11 @@ export default function Header() {
         </div>
         
         <div className="mt-auto p-6 border-t border-white/10 flex flex-col gap-4">
-          <button className="w-full bg-brand text-pureblack font-bold uppercase py-4 text-sm tracking-widest hover:bg-white transition-colors shadow-lg shadow-brand/20">
-            Call Now
-          </button>
+          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+            <button className="w-full bg-brand text-pureblack font-bold uppercase py-4 text-sm tracking-widest hover:bg-white transition-colors shadow-lg shadow-brand/20">
+              Call Now
+            </button>
+          </Link>
           <div className="flex items-center justify-center gap-4 mt-4 text-gray-400">
             <a href="https://www.instagram.com/tycalk9/" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors"><Instagram className="w-6 h-6" /></a>
           </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import VideoPlayer from '../components/VideoPlayer';
 import VideoCarousel from '../components/VideoCarousel';
@@ -81,9 +82,11 @@ export default function Gallery() {
         <p className="text-xl md:text-2xl text-gray-200 z-10 relative text-center px-6 font-medium italic mb-10 max-w-2xl">
           “Moments of Mastery: Witness Our Dogs in Action”
         </p>
-        <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors z-10 relative shadow-2xl">
-          Meet Our Trainer
-        </button>
+        <Link to="/contact" className="z-10 relative">
+          <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-2xl">
+            Meet Our Trainer
+          </button>
+        </Link>
       </section>
 
       {/* Videos Section - Full Width */}

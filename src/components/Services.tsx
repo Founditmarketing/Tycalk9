@@ -1,23 +1,28 @@
 import FadeIn from './FadeIn';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     title: 'Puppy Development',
+    slug: 'puppy-development',
     image: '/puppydevelopment.jpg',
     description: 'Give your puppy the best start with TyCal K9\'s Puppy Development Program, building confidence, obedience, and essential life skills to create a well-balanced, well-mannered companion for families across Houston and surrounding areas.'
   },
   {
     title: 'Obedience Training',
+    slug: 'dog-obedience-training',
     image: '/obediencetraining.jpg',
     description: 'TyCal K9\'s obedience training builds essential commands and behaviors through positive, personalized instruction—helping your dog develop discipline, confidence, and respect to become a well-mannered, obedient, and reliable family companion.'
   },
   {
     title: 'Protection Training',
+    slug: 'protection-dog-work',
     image: '/protectiontraining.jpg',
     description: 'TyCal K9\'s Protection Training builds reliable, controlled guardianship by developing a dog\'s confidence, obedience, and clear decision-making—teaching them to protect on command while remaining stable, safe, and family-focused. At all times.'
   },
   {
     title: 'Dog Sport Training',
+    slug: 'dog-sports-training',
     image: '/dogsporttraining.jpg',
     description: 'TyCal K9\'s Dog Sport Training develops athleticism, focus, and precision through structured exercises and competition-ready techniques—enhancing your dog\'s performance, obedience, and confidence for success in every sport or event.'
   }
@@ -66,9 +71,11 @@ export default function Services() {
               </div>
 
               {/* Footer Button */}
-              <button className="w-full bg-brand py-4 text-pureblack font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors rounded-none">
-                Learn More
-              </button>
+              <Link to={`/services/${service.slug}`} className="w-full">
+                <button className="w-full bg-brand py-4 text-pureblack font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors rounded-none">
+                  Learn More
+                </button>
+              </Link>
             </FadeIn>
           ))}
         </div>
