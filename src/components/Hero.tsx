@@ -48,7 +48,7 @@ export default function Hero() {
           <img 
             src="/tycalheroimage-left.png" 
             alt="TyCal K9 Dog" 
-            className="w-[70%] max-h-full object-contain object-bottom absolute bottom-0 right-[-2%]"
+            className="w-[85%] h-auto object-contain object-bottom absolute bottom-0 right-[-5%]"
           />
           {/* Button overlay */}
           <div className="absolute bottom-10 w-full px-6 flex justify-center z-20">
