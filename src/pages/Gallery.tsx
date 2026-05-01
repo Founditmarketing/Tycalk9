@@ -7,10 +7,10 @@ const carouselVideos = [
   { src: "/VIDEO-2026-04-17-13-56-05.mp4#t=0.001", poster: "/gallery-thumb-1.png" },
   { src: "/VIDEO-2026-04-17-13-58-00 3.mp4#t=0.001", poster: "/gallery-thumb-2.png" },
   { src: "/VIDEO-2026-04-23-20-28-42.mp4#t=0.001", poster: "/gallery-thumb-3.png" },
-  { src: "/VIDEO-2026-04-17-13-55-20.mp4#t=0.001", poster: "/gallery-thumb-new-4.png" },
-  { src: "/VIDEO-2026-04-17-13-55-37.mp4#t=0.001", poster: "/gallery-thumb-new-5.jpg" },
-  { src: "/VIDEO-2026-04-17-13-58-00.mp4#t=0.001", poster: "/gallery-thumb-new-6.png" },
-  { src: "/VIDEO-2026-04-17-13-58-00 2.mp4#t=0.001", poster: "/gallery-thumb-new-7.jpg" },
+  { src: "/VIDEO-2026-04-17-13-55-20.mp4#t=0.001", poster: "/Screenshot 2026-05-01 at 9.59.54 AM.png" },
+  { src: "/VIDEO-2026-04-17-13-55-37.mp4#t=0.001", poster: "/Screenshot 2026-05-01 at 10.00.09 AM.png" },
+  { src: "/VIDEO-2026-04-17-13-58-00.mp4#t=0.001", poster: "/Screenshot 2026-05-01 at 10.00.42 AM.png" },
+  { src: "/VIDEO-2026-04-17-13-58-00 2.mp4#t=0.001", poster: "/Screenshot 2026-05-01 at 10.00.29 AM.png" },
 ];
 
 const instagramPosts = [
