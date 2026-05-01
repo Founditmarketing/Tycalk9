@@ -33,11 +33,11 @@ export default function Services() {
           {services.map((service, idx) => (
             <div key={idx} className="flex flex-col border border-brand h-full">
               {/* Image Frame */}
-              <div className="h-64 w-full overflow-hidden">
+              <div className="h-80 w-full overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
@@ -46,7 +46,14 @@ export default function Services() {
                 <h3 className="text-white font-heading text-2xl md:text-3xl uppercase tracking-wide leading-tight mb-4 md:min-h-[3.5rem] flex flex-col justify-center">
                   <span className="md:hidden">{service.title}</span>
                   <span className="hidden md:flex flex-col">
-                    {service.title.split(' ').map((word, i) => <span key={i}>{word}</span>)}
+                    {service.title === 'Dog Sport Training' ? (
+                      <>
+                        <span>Dog Sport</span>
+                        <span>Training</span>
+                      </>
+                    ) : (
+                      service.title.split(' ').map((word, i) => <span key={i}>{word}</span>)
+                    )}
                   </span>
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
@@ -55,7 +62,7 @@ export default function Services() {
               </div>
 
               {/* Footer Button */}
-              <button className="w-full bg-brand py-4 text-pureblack font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors">
+              <button className="w-full bg-brand py-4 text-pureblack font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors rounded-none">
                 Learn More
               </button>
             </div>

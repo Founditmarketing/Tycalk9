@@ -44,11 +44,11 @@ export default function Hero() {
         </div>
         
         {/* Dog Image & Floating Button */}
-        <div className="flex-1 relative w-full mt-2 overflow-hidden">
+        <div className="flex-1 relative w-full mt-2">
           <img 
             src="/tycalheroimage-left.png" 
             alt="TyCal K9 Dog" 
-            className="w-[85%] h-auto object-contain object-bottom absolute bottom-0 right-[-5%]"
+            className="w-[70%] max-h-full object-contain object-bottom absolute bottom-0 right-[-2%]"
           />
           {/* Button overlay */}
           <div className="absolute bottom-10 w-full px-6 flex justify-center z-20">
