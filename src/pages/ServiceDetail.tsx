@@ -19,11 +19,11 @@ export default function ServiceDetail() {
         <h1 className="font-heading text-6xl md:text-8xl text-white uppercase tracking-wider mb-8 drop-shadow-lg z-10 relative text-center px-4">
           {service.title}
         </h1>
-        <Link to="/contact" className="z-10 relative">
+        <a href="tel:+17132916543" className="z-10 relative">
           <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-2xl">
             Call Now
           </button>
-        </Link>
+        </a>
       </section>
 
       {/* Content Section */}
@@ -39,11 +39,11 @@ export default function ServiceDetail() {
               <p>{service.description}</p>
             </div>
             <div className="mt-8">
-              <Link to="/contact">
+              <a href="tel:+17132916543">
                 <button className="bg-brand text-pureblack font-bold uppercase py-4 px-10 text-sm md:text-lg tracking-widest hover:bg-white transition-colors shadow-xl">
                   Call Now
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
 
