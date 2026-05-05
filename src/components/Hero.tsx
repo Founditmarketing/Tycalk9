@@ -21,7 +21,7 @@ export default function Hero() {
         {/* Right Side Content */}
         <FadeIn direction="right" delay={400} className="w-full md:w-[60%] flex flex-col justify-center gap-6 pl-0 md:-ml-4">
           <h1 className="font-heading text-[4.5rem] lg:text-[6rem] text-white uppercase leading-[0.9] tracking-tight">
-            #1 Dog Training<br />Program in Houston
+            <span className="animate-text-gradient inline-block drop-shadow-lg">#1</span> Dog Training<br />Program in <span className="animate-text-gradient inline-block drop-shadow-lg">Houston</span>
           </h1>
           <p className="text-gray-400 italic text-3xl md:text-5xl font-heading uppercase tracking-wide mt-2">
              "Where the pros go."
@@ -44,7 +44,7 @@ export default function Hero() {
              "WHERE THE PROS GO."
           </p>
           <h1 className="font-heading text-5xl text-white uppercase leading-[0.9] tracking-tight mt-1 drop-shadow-xl">
-            #1 Dog Training<br />Program In<br />Houston
+            <span className="animate-text-gradient inline-block drop-shadow-lg">#1</span> Dog Training<br />Program In<br /><span className="animate-text-gradient inline-block drop-shadow-lg">Houston</span>
           </h1>
         </FadeIn>
         
@@ -65,6 +65,13 @@ export default function Hero() {
           </div>
         </FadeIn>
       </div>
+
+      {/* Scroll Indicator */}
+      <FadeIn delay={800} direction="none" className="absolute bottom-6 left-6 translate-x-0 md:bottom-8 md:left-1/2 md:-translate-x-1/2 z-30 flex flex-col items-center opacity-80">
+        <div className="w-[2px] h-16 md:h-24 bg-white/10 relative overflow-hidden rounded-full">
+          <div className="w-full h-[50%] bg-brand absolute top-0 left-0 animate-scroll-drop rounded-full shadow-[0_0_10px_#F2B536]"></div>
+        </div>
+      </FadeIn>
     </section>
   );
 }

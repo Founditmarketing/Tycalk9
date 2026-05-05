@@ -33,3 +33,41 @@ body {
   }
 }
 
+@keyframes sweep {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(150%) skewX(-15deg); }
+}
+
+.animate-sweep {
+  animation: sweep 0.8s ease-in-out forwards;
+}
+
+@keyframes text-gradient-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: -200% 50%; }
+}
+
+.animate-text-gradient {
+  background: linear-gradient(
+    90deg, 
+    #f2b636 0%, 
+    #f0950f 25%, 
+    #f2b636 50%, 
+    #f0950f 75%, 
+    #f2b636 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: text-gradient-shimmer 6s linear infinite;
+}
+
+@keyframes scroll-drop {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+.animate-scroll-drop {
+  animation: scroll-drop 1.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
