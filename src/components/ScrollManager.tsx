@@ -5,6 +5,8 @@ export default function ScrollManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    const scroller = document.getElementById('main-scroller');
+    
     if (hash) {
       // Small delay to allow the new page to render its elements before scrolling
       setTimeout(() => {
@@ -15,7 +17,11 @@ export default function ScrollManager() {
       }, 150);
     } else {
       // If no hash, automatically scroll to the top of the page on route change
-      window.scrollTo(0, 0);
+      if (scroller) {
+        scroller.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, 0);
+      }
     }
   }, [pathname, hash]);
 

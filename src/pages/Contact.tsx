@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.getElementById('main-scroller')?.scrollTo(0, 0);
   }, []);
 
   return (

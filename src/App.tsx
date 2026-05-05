@@ -17,7 +17,7 @@ export default function App() {
   const [isAppReady, setIsAppReady] = useState(false);
 
   return (
-    <div className="font-sans text-white min-h-screen bg-pureblack flex flex-col">
+    <div id="main-scroller" className="font-sans text-white h-screen overflow-y-auto overflow-x-hidden w-full relative bg-pureblack flex flex-col">
       <LoadingScreen onComplete={() => setIsAppReady(true)} />
       
       {isAppReady && (

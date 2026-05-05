@@ -9,16 +9,20 @@ export default function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // The top alert bar is about 32px tall
-      if (window.scrollY > 32) {
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.scrollTop > 32) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    const scroller = document.getElementById('main-scroller');
+    if (scroller) {
+      scroller.addEventListener('scroll', handleScroll);
+      return () => scroller.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   // Prevent scrolling when mobile menu is open
