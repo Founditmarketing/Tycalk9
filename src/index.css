@@ -75,6 +75,7 @@ body {
 /* Custom Webkit Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
+  -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -90,4 +91,15 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f0950f;
+}
+
+/* Thinner scrollbar for mobile screens */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-width: 1px;
+    border-radius: 4px;
+  }
 }
