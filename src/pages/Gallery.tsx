@@ -26,17 +26,28 @@ const instagramPosts = [
 ];
 
 const galleryImages = [
+  "/new/IMG_9254.jpg",
+  "/new/IMG_9255.jpg",
+  "/new/IMG_9256.jpg",
+  "/new/IMG_9257.jpg",
+  "/new/IMG_9258.jpg",
+  "/new/IMG_9259.jpg",
+  "/new/IMG_9260.jpg",
+  "/new/IMG_9261.jpg",
+  "/new/IMG_9262.jpg",
+  "/new/IMG_9263.jpg",
+  "/new/IMG_9264.jpg",
+  "/new/IMG_9265.jpg",
+  "/new/IMG_9266.jpg",
+  "/new/IMG_9267.jpg",
   "/boardandtrain.jpg",
   "/caninetraining.jpg",
   "/dogsporttraining.jpg",
   "/obediencetraining.jpg",
-  "/off-leashobidencetraining.jpg",
   "/protectiondogwork.jpg",
   "/protectiontraining.jpg",
   "/puppydevelopment.jpg",
-  "/puppydevelopmentpage.jpg",
-  "/securitydogtraining.png",
-  "/tycalheroimage-left.png"
+  "/puppydevelopmentpage.jpg"
 ];
 
 export default function Gallery() {
@@ -119,11 +130,11 @@ export default function Gallery() {
           <h2 className="font-heading text-4xl md:text-6xl text-brand uppercase tracking-wider mb-12 text-center drop-shadow-lg">
             Training Gallery
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4">
             {galleryImages.map((src, index) => (
               <div 
                 key={index}
-                className="w-full h-64 overflow-hidden rounded-md cursor-pointer group relative shadow-lg"
+                className="w-full aspect-square overflow-hidden rounded-md cursor-pointer group relative shadow-lg"
                 onClick={() => openLightbox(index)}
               >
                 <img 

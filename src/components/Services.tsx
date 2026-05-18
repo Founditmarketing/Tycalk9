@@ -5,13 +5,13 @@ const services = [
   {
     title: 'Puppy Development',
     slug: 'puppy-development',
-    image: '/puppydevelopment.jpg',
+    image: '/obediencetraining.jpg',
     description: 'Give your puppy the best start with TyCal K9\'s Puppy Development Program, building confidence, obedience, and essential life skills to create a well-balanced, well-mannered companion for families across Houston and surrounding areas.'
   },
   {
     title: 'Obedience Training',
     slug: 'dog-obedience-training',
-    image: '/obediencetraining.jpg',
+    image: '/puppydevelopment.jpg',
     description: 'TyCal K9\'s obedience training builds essential commands and behaviors through positive, personalized instruction—helping your dog develop discipline, confidence, and respect to become a well-mannered, obedient, and reliable family companion.'
   },
   {
