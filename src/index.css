@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Anton", "Impact", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+  --color-brand: #F2B536;
+  --color-dark: #0A0A0A;
+  --color-pureblack: #000000;
+}
+
+html, body, #root {
+  max-width: 100vw;
+  width: 100%;
+  background-color: var(--color-pureblack);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.texture-bg {
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.grunge-bg {
+  background-color: var(--color-dark);
+  background-image: url("/tycalk9backgroundtexture.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@layer base {
+  button {
+    border-radius: 0.375rem;
+  }
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(150%) skewX(-15deg); }
+}
+
+.animate-sweep {
+  animation: sweep 0.8s ease-in-out forwards;
+}
+
+@keyframes text-gradient-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: -200% 50%; }
+}
+
+.animate-text-gradient {
+  background: linear-gradient(
+    90deg, 
+    #f2b636 0%, 
+    #f0950f 25%, 
+    #f2b636 50%, 
+    #f0950f 75%, 
+    #f2b636 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: text-gradient-shimmer 6s linear infinite;
+}
+
+@keyframes scroll-drop {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+.animate-scroll-drop {
+  animation: scroll-drop 1.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar,
+#main-scroller::-webkit-scrollbar {
+  width: 12px;
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-track,
+#main-scroller::-webkit-scrollbar-track {
+  background: var(--color-pureblack);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb,
+#main-scroller::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+  border-radius: 10px;
+  border: 3px solid var(--color-pureblack);
+}
+
+::-webkit-scrollbar-thumb:hover,
+#main-scroller::-webkit-scrollbar-thumb:hover {
+  background: #f0950f;
+}
+
+/* Thinner scrollbar for mobile screens */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar,
+  #main-scroller::-webkit-scrollbar {
+    width: 6px;
+    -webkit-appearance: none;
+  }
+  ::-webkit-scrollbar-thumb,
+  #main-scroller::-webkit-scrollbar-thumb {
+    border-width: 1px;
+    border-radius: 4px;
+  }
+}
