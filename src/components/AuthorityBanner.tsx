@@ -9,7 +9,7 @@ export default function AuthorityBanner() {
     if (!document.getElementById('instagram-embed-script')) {
       const script = document.createElement('script');
       script.id = 'instagram-embed-script';
-      script.src = '//www.instagram.com/embed.js';
+      script.src = 'https://www.instagram.com/embed.js';
       script.async = true;
       document.body.appendChild(script);
     } else if ((window as any).instgrm) {

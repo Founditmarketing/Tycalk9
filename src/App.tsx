@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ScrollManager from './components/ScrollManager';
+import Analytics from './components/Analytics';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -23,6 +24,7 @@ export default function App() {
       {isAppReady && (
         <>
           <ScrollManager />
+          <Analytics />
           <Header />
           <main className="flex-grow">
             <Routes>
