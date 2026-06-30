@@ -173,6 +173,8 @@ export default function Header() {
           <Link to="/#reviews" onClick={() => setIsMobileMenuOpen(false)} className="font-heading text-2xl tracking-widest uppercase text-brand hover:text-white transition-colors">Reviews</Link>
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="font-heading text-2xl tracking-widest uppercase text-white hover:text-brand transition-colors">Contact Us</Link>
           <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="font-heading text-2xl tracking-widest uppercase text-white hover:text-brand transition-colors">Blogs</Link>
+
+          <Link to="/privacy-policy" onClick={() => setIsMobileMenuOpen(false)} className="mt-2 font-sans text-sm tracking-wide uppercase text-gray-400 hover:text-brand transition-colors">Privacy Policy</Link>
         </div>
         
         <div className="mt-auto p-6 border-t border-white/10 flex flex-col gap-4">

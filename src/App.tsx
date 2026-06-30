@@ -12,6 +12,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import FloatingContact from './components/FloatingContact';
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
           </main>
           <Footer />
