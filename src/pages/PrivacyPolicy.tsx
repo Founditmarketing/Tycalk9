@@ -112,8 +112,8 @@ export default function PrivacyPolicy() {
                 widget.
               </li>
               <li className="pl-5 border-l-2 border-brand/40">
-                <span className="text-white font-semibold">Resend</span> &mdash; delivers contact-form
-                submissions to our inbox.
+                <span className="text-white font-semibold">Found It CRM</span> &mdash; processes contact-form
+                submissions securely.
               </li>
             </ul>
           </div>

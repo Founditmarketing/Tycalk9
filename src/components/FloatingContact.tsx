@@ -30,10 +30,15 @@ export default function FloatingContact() {
     setStatusMessage('');
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://www.founditos.com/api/contact-form/ce1f8772-524e-4b43-9b9a-896d0e778955', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: `Service: ${formData.service || 'General'}\n\n${formData.message}`,
+        }),
       });
 
       const result = await response.json();
