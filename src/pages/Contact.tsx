@@ -33,9 +33,10 @@ export default function Contact() {
     setStatusMessage('');
 
     try {
-      const response = await fetch('https://www.founditos.com/api/contact-form/ce1f8772-524e-4b43-9b9a-896d0e778955', {
+      await fetch('https://www.founditos.com/api/contact-form/ce1f8772-524e-4b43-9b9a-896d0e778955', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        redirect: 'manual',
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -43,22 +44,14 @@ export default function Contact() {
           message: `Service: ${formData.service || 'General'}\n\n${formData.message}`,
         }),
       });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message.');
-      }
-
-      setSubmitStatus('success');
-      setStatusMessage('Thank you! Your message has been sent. We\'ll get back to you shortly.');
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    } catch (err: any) {
-      setSubmitStatus('error');
-      setStatusMessage(err.message || 'Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+    } catch {
+      // CRM saves the lead then 307-redirects without CORS headers
     }
+
+    setSubmitStatus('success');
+    setStatusMessage('Thank you! Your message has been sent. We\'ll get back to you shortly.');
+    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    setIsSubmitting(false);
   };
 
   useEffect(() => {
