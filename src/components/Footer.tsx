@@ -17,12 +17,12 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="font-heading text-3xl uppercase tracking-wide">Contact</h3>
             <div className="flex flex-col gap-3 font-medium">
-              <a href="tel:7132916543" className="hover:underline">(713) 291-6543</a>
+              <a href="tel:+17132916543" className="hover:underline">(713) 291-6543</a>
               <a href="mailto:tycal0308@gmail.com" className="hover:underline">tycal0308@gmail.com</a>
-              <p>
+              <a href="https://maps.google.com/?q=320+McKeever+Rd,+Arcola,+TX+77583" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 320 McKeever Rd, Arcola,<br />
                 TX 77583
-              </p>
+              </a>
             </div>
           </div>
 

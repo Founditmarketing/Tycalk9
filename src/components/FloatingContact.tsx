@@ -47,6 +47,11 @@ export default function FloatingContact() {
 
     setSubmitStatus('success');
     setStatusMessage('Message sent! We\'ll be in touch soon.');
+
+    const w = window as any;
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: 'form_submit_popup' });
+
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
     setIsSubmitting(false);
   };

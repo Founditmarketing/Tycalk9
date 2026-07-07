@@ -50,6 +50,11 @@ export default function Contact() {
 
     setSubmitStatus('success');
     setStatusMessage('Thank you! Your message has been sent. We\'ll get back to you shortly.');
+
+    const w = window as any;
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: 'form_submit_main' });
+
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
     setIsSubmitting(false);
   };
@@ -215,7 +220,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="font-heading text-2xl uppercase tracking-widest text-brand mb-1">Our Facility</h3>
-                <p className="text-gray-300 text-lg">320 McKeever Rd<br/>Arcola, TX 77583</p>
+                <a href="https://maps.google.com/?q=320+McKeever+Rd,+Arcola,+TX+77583" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-lg">320 McKeever Rd<br/>Arcola, TX 77583</a>
               </div>
             </div>
 
@@ -225,7 +230,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="font-heading text-2xl uppercase tracking-widest text-brand mb-1">Call Us</h3>
-                <p className="text-gray-300 text-lg">(713) 291-6543</p>
+                <a href="tel:+17132916543" className="text-gray-300 text-lg">(713) 291-6543</a>
               </div>
             </div>
 
@@ -235,7 +240,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="font-heading text-2xl uppercase tracking-widest text-brand mb-1">Email Us</h3>
-                <p className="text-gray-300 text-lg">tycal0308@gmail.com</p>
+                <a href="mailto:tycal0308@gmail.com" className="text-gray-300 text-lg">tycal0308@gmail.com</a>
               </div>
             </div>
           </div>

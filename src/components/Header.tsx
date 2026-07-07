@@ -40,8 +40,8 @@ export default function Header() {
       {/* Top Alert Bar */}
       <div className="w-full bg-black md:bg-brand py-2 px-4 flex justify-center items-center text-white md:text-pureblack z-50 relative">
         <div className="text-center font-bold italic text-[11px] md:text-sm tracking-wider md:tracking-wide">
-          <span className="block md:inline">320 McKeever Rd, Arcola, TX —</span>
-          <span className="block md:inline md:ml-1">tycal0308@gmail.com — (713) 291-6543</span>
+          <span className="block md:inline"><a href="https://maps.google.com/?q=320+McKeever+Rd,+Arcola,+TX+77583" target="_blank" rel="noopener noreferrer">320 McKeever Rd, Arcola, TX</a> —</span>
+          <span className="block md:inline md:ml-1"><a href="mailto:tycal0308@gmail.com">tycal0308@gmail.com</a> — <a href="tel:+17132916543">(713) 291-6543</a></span>
         </div>
         <a 
           href="https://www.instagram.com/tycalk9/" 

@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="flex flex-col gap-2 text-gray-200 text-lg">
               <span className="font-semibold text-white">TyCal K9</span>
-              <span>320 McKeever Rd, Arcola, TX 77583</span>
+              <a href="https://maps.google.com/?q=320+McKeever+Rd,+Arcola,+TX+77583" target="_blank" rel="noopener noreferrer">320 McKeever Rd, Arcola, TX 77583</a>
               <a href="tel:+17132916543" className="text-brand hover:underline w-fit">(713) 291-6543</a>
               <a href="mailto:tycal0308@gmail.com" className="text-brand hover:underline w-fit">tycal0308@gmail.com</a>
             </div>
