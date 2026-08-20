@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { servicesData } from '../data/servicesData';
 import { MapPin, Phone, Mail, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import PageSEO from '../components/PageSEO';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -65,6 +66,11 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-pureblack text-white flex flex-col font-sans">
+      <PageSEO
+        title="Contact TyCal K9 | Book Dog Training in Arcola, TX"
+        description="Get in touch with TyCal K9 to start your dog's training. Located at 320 McKeever Rd, Arcola, TX — serving Houston, Missouri City, and Katy."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

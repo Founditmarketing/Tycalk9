@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import PageSEO from '../components/PageSEO';
 
 export default function About() {
   return (
     <div className="w-full bg-pureblack min-h-screen">
+      <PageSEO
+        title="About TyCal K9 | Houston's Trusted Dog Trainers Since 2013"
+        description="Founded in 2013 by Manuel Golden, TyCal K9 is one of Houston's most trusted names in professional dog training, obedience, and protection work."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

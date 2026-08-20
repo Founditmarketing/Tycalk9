@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PageSEO from '../components/PageSEO';
 
 const LAST_UPDATED = 'June 30, 2026';
 
@@ -10,6 +11,11 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="min-h-screen bg-pureblack text-white flex flex-col font-sans">
+      <PageSEO
+        title="Privacy Policy | TyCal K9"
+        description="Read TyCal K9's Privacy Policy to learn what information we collect, how we use it, and your choices when visiting tycalk9.com."
+        path="/privacy-policy"
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

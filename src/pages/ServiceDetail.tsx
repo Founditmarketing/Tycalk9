@@ -1,9 +1,10 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
+import PageSEO, { SITE_URL } from '../components/PageSEO';
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
-  
+
   // Find the matching service by slug
   const service = servicesData.find(s => s.slug === slug);
 
@@ -11,8 +12,37 @@ export default function ServiceDetail() {
     return <Navigate to="/" replace />;
   }
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.subtitle,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'TyCal K9',
+      url: SITE_URL,
+      telephone: '+17132916543',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '320 McKeever Rd',
+        addressLocality: 'Arcola',
+        addressRegion: 'TX',
+        postalCode: '77583',
+        addressCountry: 'US',
+      },
+    },
+    areaServed: ['Arcola, TX', 'Missouri City, TX', 'Katy, TX', 'Houston, TX'],
+  };
+
   return (
     <div className="w-full bg-pureblack min-h-screen flex flex-col">
+      <PageSEO
+        title={`${service.title} | TyCal K9 Dog Training`}
+        description={service.subtitle}
+        path={`/services/${service.slug}`}
+        image={service.image}
+        schema={serviceSchema}
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

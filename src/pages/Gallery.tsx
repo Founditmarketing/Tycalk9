@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import VideoPlayer from '../components/VideoPlayer';
 import VideoCarousel from '../components/VideoCarousel';
+import PageSEO from '../components/PageSEO';
 
 const carouselVideos = [
   { src: "/VIDEO-2026-04-17-13-56-05.mp4#t=0.001", poster: "/gallery-thumb-1.png" },
@@ -84,6 +85,11 @@ export default function Gallery() {
 
   return (
     <div className="w-full bg-pureblack min-h-screen flex flex-col">
+      <PageSEO
+        title="Gallery | TyCal K9 Dog Training in Action"
+        description="See TyCal K9's dog training in action — photos and videos of obedience, protection, and board & train programs in Arcola, TX."
+        path="/gallery"
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

@@ -1,15 +1,29 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { blogData } from '../data/blogData';
 import { ArrowLeft } from 'lucide-react';
+import PageSEO, { SITE_URL } from '../components/PageSEO';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  
+
   const post = blogData.find(p => p.slug === slug);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `${SITE_URL}${post.image}`,
+    datePublished: new Date(post.date).toISOString().slice(0, 10),
+    author: {
+      '@type': 'Organization',
+      name: 'TyCal K9',
+    },
+  };
 
   // Helper to safely render paragraphs from string content containing newlines
   const renderContent = (content: string) => {
@@ -22,6 +36,13 @@ export default function BlogPost() {
 
   return (
     <div className="w-full bg-pureblack min-h-screen flex flex-col font-sans text-white">
+      <PageSEO
+        title={`${post.title} | TyCal K9 Blog`}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        image={post.image}
+        schema={articleSchema}
+      />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
         <div className="absolute inset-0 bg-black/50 z-0"></div>

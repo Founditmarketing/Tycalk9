@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import FadeIn from './FadeIn';
 
-const faqs = [
+export const faqs = [
   {
     question: "WHAT TYPES OF TRAINING DOES TYCAL K9 OFFER?",
     answer: "We provide obedience, protection, puppy development, board & train, and advanced off-leash training programs."
