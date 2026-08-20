@@ -3,32 +3,10 @@ import Services from '../components/Services';
 import AuthorityBanner from '../components/AuthorityBanner';
 import SocialProof from '../components/SocialProof';
 import FAQ, { faqs } from '../components/FAQ';
-import PageSEO, { SITE_URL } from '../components/PageSEO';
+import PageSEO from '../components/PageSEO';
+import { buildOrganizationSchema } from '../data/organizationSchema';
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'TyCal K9',
-  image: `${SITE_URL}/tycalheroimage-left.png`,
-  url: SITE_URL,
-  telephone: '+17132916543',
-  email: 'tycal0308@gmail.com',
-  priceRange: '$$',
-  foundingDate: '2013',
-  founder: {
-    '@type': 'Person',
-    name: 'Manuel Golden',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '320 McKeever Rd',
-    addressLocality: 'Arcola',
-    addressRegion: 'TX',
-    postalCode: '77583',
-    addressCountry: 'US',
-  },
-  areaServed: ['Arcola, TX', 'Missouri City, TX', 'Katy, TX', 'Houston, TX'],
-};
+const localBusinessSchema = buildOrganizationSchema('LocalBusiness');
 
 const faqSchema = {
   '@context': 'https://schema.org',

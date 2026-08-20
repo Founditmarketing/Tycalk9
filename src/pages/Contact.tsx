@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { servicesData } from '../data/servicesData';
 import { MapPin, Phone, Mail, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import PageSEO from '../components/PageSEO';
+import { buildOrganizationSchema } from '../data/organizationSchema';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -70,6 +71,7 @@ export default function Contact() {
         title="Contact TyCal K9 | Book Dog Training in Arcola, TX"
         description="Get in touch with TyCal K9 to start your dog's training. Located at 320 McKeever Rd, Arcola, TX — serving Houston, Missouri City, and Katy."
         path="/contact"
+        schema={buildOrganizationSchema('Organization')}
       />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">

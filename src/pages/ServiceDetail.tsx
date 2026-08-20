@@ -1,6 +1,7 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 import PageSEO, { SITE_URL } from '../components/PageSEO';
+import { ORG_ADDRESS, ORG_AREA_SERVED } from '../data/organizationSchema';
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -22,16 +23,9 @@ export default function ServiceDetail() {
       name: 'TyCal K9',
       url: SITE_URL,
       telephone: '+17132916543',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '320 McKeever Rd',
-        addressLocality: 'Arcola',
-        addressRegion: 'TX',
-        postalCode: '77583',
-        addressCountry: 'US',
-      },
+      address: ORG_ADDRESS,
     },
-    areaServed: ['Arcola, TX', 'Missouri City, TX', 'Katy, TX', 'Houston, TX'],
+    areaServed: ORG_AREA_SERVED,
   };
 
   return (

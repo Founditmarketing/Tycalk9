@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageSEO from '../components/PageSEO';
+import { buildOrganizationSchema } from '../data/organizationSchema';
 
 export default function About() {
   return (
@@ -8,6 +9,7 @@ export default function About() {
         title="About TyCal K9 | Houston's Trusted Dog Trainers Since 2013"
         description="Founded in 2013 by Manuel Golden, TyCal K9 is one of Houston's most trusted names in professional dog training, obedience, and protection work."
         path="/about"
+        schema={buildOrganizationSchema('Organization')}
       />
       {/* Hero Section */}
       <section className="relative w-full pt-48 pb-12 md:pt-64 md:pb-16 flex flex-col items-center justify-center grunge-bg">
